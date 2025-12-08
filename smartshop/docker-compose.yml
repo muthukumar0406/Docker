@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: smartshop_web
+    ports:
+      - "5005:5000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/
+      - APP_ENV=production
+    volumes:
+      - .:/app
+      - ./logs:/app/logs
+
+  mongo:
+    image: mongo:6.0
+    container_name: smartshop_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:

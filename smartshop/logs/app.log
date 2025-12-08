@@ -1,0 +1,14 @@
+2025-12-08 13:01:41,760 - INFO - Application started
+2025-12-08 13:01:42,266 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.0.3:5000
+2025-12-08 13:01:42,271 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-08 13:05:00,895 - INFO - Application started
+2025-12-08 13:05:02,108 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.0.3:5000
+2025-12-08 13:05:02,140 - INFO - [33mPress CTRL+C to quit[0m
+2025-12-08 13:06:17,186 - INFO - Health check OK
+2025-12-08 13:06:17,194 - INFO - 172.22.0.1 - - [08/Dec/2025 13:06:17] "GET /health HTTP/1.1" 200 -
