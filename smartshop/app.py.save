@@ -1,0 +1,23 @@
+import os
+from flask import Flask, jsonify
+from pymongo import MongoClient
+
+app = Flask(__name__)
+
+# MongoDB connection (inside Docker network)
+mongo_url =os.getenv("MONGO_URL", ")
+client = MongoClient("mongodb://mongo:27017/")
+db = client.smartshop
+products_collection = db.products
+
+@app.route("/")
+def home():
+    return "Welcome to SmartShop API"
+
+@app.route("/products")
+def get_products():
+    products = list(products_collection.find({}, {"_id": 0}))
+    return jsonify(products)
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
