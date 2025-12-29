@@ -6,4 +6,5 @@ const movieSchema = new mongoose.Schema({
   rating: { type: Number, required: true }
 });
 
+
 module.exports = mongoose.model("Movie", movieSchema);
